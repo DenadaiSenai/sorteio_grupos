@@ -1,6 +1,6 @@
 # Script para sorteio de grupos de alunos
 
-Funçao usada para sorteio de grupos onde:
+Função usada para sorteio de grupos onde:
 
 ```
 Quantidade de participantes -> qtde_part=34,
