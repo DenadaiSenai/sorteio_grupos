@@ -24,9 +24,10 @@ GUI feita em PySimpleGUIQT para o sorteio dos grupos
 
 > Requerimentos
 >```
->Pandas
->PySimpleGUIQt
+>Python >= 3.6
+>pandas >= 1.5
+>PySimpleGUIQt >= 0.35.0
 >```
 >```
->pip install pandas PySimpleGUIQt --user
+>pip3 install pandas PySimpleGUIQt --user
 >```
