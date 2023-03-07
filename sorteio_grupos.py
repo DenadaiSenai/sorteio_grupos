@@ -10,18 +10,16 @@ import random
 import time
 import pandas as pd
 
-def sorteio_grupos(qtde_part=34, qtde_min_grupo=4):
+pd.options.display.float_format = '{:,.0f}'.format
+
+def sorteio_grupos_shuffle(qtde_part=34, qtde_min_grupo=4):
     total_grupos = int(qtde_part / qtde_min_grupo)
     resto = (qtde_part % qtde_min_grupo)
     
     # Cria um lista de numeros aleatoriamente com a qtde de alunos
     amostra = list(range(1,qtde_part+1))
-    sorteio = []
-    for i in range(qtde_part):
-        random.seed(time.time())
-        #tam = len(amostra)
-        sorteio.append(amostra.pop(random.randint(0,len(amostra)-1))) 
-        # print(amostra,i)
+    sorteio = amostra.copy()
+    random.shuffle(sorteio)
         
     # Cria os grupos da lista de sorteio   
     grupos = {'id': range(1,qtde_min_grupo+2)}
@@ -47,7 +45,7 @@ if __name__ == "__main__":
         p2 = int(sys.argv[2])
         if p1>=p2:
             #print(p1,p2,type(p1),type(p2))
-            res = sorteio_grupos(p1,p2)
+            res = sorteio_grupos_shuffle(p1,p2)
         else:
             print("""
 Uso: python3 sorteio_grupos.py <qtde_de_participantes> <qtde_min_grupo>
@@ -56,7 +54,7 @@ Uso: python3 sorteio_grupos.py <qtde_de_participantes> <qtde_min_grupo>
 """)
             exit(-1)
     else:
-        res = sorteio_grupos(39,5)
+        res = sorteio_grupos_shuffle(39,5)
     
     # print(res['grupos'])
     # print(res['grupos'].describe())
