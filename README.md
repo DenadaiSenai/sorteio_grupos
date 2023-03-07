@@ -1,5 +1,7 @@
 # Script para sorteio de grupos de alunos
 
+
+### sorteio_grupos.py
 Função usada para sorteio de grupos onde:
 
 ```
@@ -16,3 +18,15 @@ Retorna:
       "grupos": df_grupos               # DataFrame Pandas dos grupos soteados
     }
 ``` 
+
+### sorteio_grupos_guipg.py
+GUI feita em PySimpleGUIQT para o sorteio dos grupos
+
+> Requerimentos
+>```
+>Pandas
+>PySimpleGUIQt
+>```
+>```
+>pip install pandas PySimpleGUIQt --user
+>```
