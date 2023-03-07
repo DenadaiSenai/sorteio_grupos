@@ -12,7 +12,7 @@ import pandas as pd
 
 pd.options.display.float_format = '{:,.0f}'.format
 
-def sorteio_grupos_shuffle(qtde_part=34, qtde_min_grupo=4):
+def sorteio_grupos(qtde_part=34, qtde_min_grupo=4):
     total_grupos = int(qtde_part / qtde_min_grupo)
     resto = (qtde_part % qtde_min_grupo)
     
@@ -45,7 +45,7 @@ if __name__ == "__main__":
         p2 = int(sys.argv[2])
         if p1>=p2:
             #print(p1,p2,type(p1),type(p2))
-            res = sorteio_grupos_shuffle(p1,p2)
+            res = sorteio_grupos(p1,p2)
         else:
             print("""
 Uso: python3 sorteio_grupos.py <qtde_de_participantes> <qtde_min_grupo>
@@ -54,7 +54,7 @@ Uso: python3 sorteio_grupos.py <qtde_de_participantes> <qtde_min_grupo>
 """)
             exit(-1)
     else:
-        res = sorteio_grupos_shuffle(39,5)
+        res = sorteio_grupos(39,5)
     
     # print(res['grupos'])
     # print(res['grupos'].describe())
