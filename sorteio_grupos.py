@@ -6,7 +6,7 @@ Created on Tue Jan 31 18:49:32 2023
 @author: Marcio Denadai
 """
 
-import random
+from random import shuffle, seed
 import time
 import pandas as pd
 
@@ -30,11 +30,13 @@ def sorteio_grupos(qtde_part=34, qtde_min_grupo=4, excluir=[]):
     total_grupos = int(tam_amostra / qtde_min_grupo)
     resto = int(tam_amostra % qtde_min_grupo)
     
-    sorteio = []    
-    for i in range(tam_amostra):
-        random.seed(time.time() * i)
+    sorteio = _amostra.copy()
+    seed(time.time())
+    shuffle(sorteio)
+    # for i in range(tam_amostra):
+        
         #tam = len(amostra)
-        sorteio.append(amostra.pop(random.randint(0,len(amostra)-1))) 
+        # sorteio.append(amostra.pop(random.randint(0,len(amostra)-1))) 
         # print(amostra,i)
     
     #print(f"{amostra}, {sorteio}, {len(sorteio)}")
