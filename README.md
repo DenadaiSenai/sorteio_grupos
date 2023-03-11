@@ -20,10 +20,16 @@ Retorna:
 
 ### sorteio_grupos_gui_pg.py
 GUI feita em [PySimpleGUIQt](https://www.pysimplegui.org/en/latest/) para o sorteio dos grupos
+```
+python3 ./sorteio_grupos_gui_pg.py
+```
 ![sorteio_grupos_gui_pg](screenshots/sorteio_grupos_gui_pg.png)
 
 ### sorteio_grupos_gui_st.py
 GUI feita com [Streamlit](www.streamlit.com) para o sorteio dos grupos
+```
+streamlit run ./sorteio_grupos_gui_st.py
+```
 ![sorteio_grupos_gui_st](screenshots/sorteio_grupos_gui_st.png)
 
 
