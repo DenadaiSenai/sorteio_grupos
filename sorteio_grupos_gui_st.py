@@ -27,6 +27,6 @@ with st.form("Digite os dados paro o sorteio:") as form:
         st.write('Formulário enviado')
         st.write(f"A quantidade de participantes é de {res['qtde_part']} pessoas, sendo {qtde_min_grupo} pessoas por grupo.")
         res['grupos'].set_index('id', inplace=True)
-        st.write(res['grupos'].style.format('{:02.0f}'))
+        st.write(res['grupos'].T.style.format('{:02.0f}')) # Apresentação da tabela transversal
         #st.write(pd.DataFrame.from_dict(res['amostra']))
         
