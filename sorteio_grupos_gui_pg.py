@@ -12,14 +12,14 @@ from sorteio_grupos import *
 data = [ str(i) for i in range(1,11)]
 # cabecalho = [ f"G{i:02d}" for i in range(1,11)]
 
+# Iniciar variáveis da janela para o looping principal
 excluir='6 9'
 _res = sorteio_grupos(40, 3, excluir)['grupos']
 res = _res.fillna(0).astype(int).values.tolist()
 cabecalho = _res.columns.tolist()
 
-# Iniciar varáveis da janela para o looping principal
 tema = 'Reddit' # Tema inicial
-fonte = ('Arial',12)
+fonte = ('Arial',12) # Fonte dos componentes
 notExit = True  # Variável para travar no looping da troca de tema
 while(notExit):
     font = fonte
@@ -57,6 +57,6 @@ while(notExit):
     # Popup para confirmar a saída do programa
     if not notExit:
         x = pg.popup_yes_no(f"Você quer realmente sair?")
-        print(x)
+        #print(x)
         if x=='No':
             notExit = True       
