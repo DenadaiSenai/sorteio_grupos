@@ -35,6 +35,6 @@ GUI feita com [Streamlit](www.streamlit.com) para o sorteio dos grupos
 >streamlit >= 1.17.0
 >```
 >```
->pip3 install pandas PySimpleGUIQt --user
+>pip3 install pandas PySimpleGUIQt streamlit --user
 >```
 [![SENAI SP](https://www.sp.senai.br/images/senai.svg)](https://www.sp.senai.br)
