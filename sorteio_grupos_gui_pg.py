@@ -19,7 +19,7 @@ cabecalho = _res.columns.tolist()
 
 # Iniciar varáveis da janela para o looping principal
 tema = 'Reddit' # Tema inicial
-fonte = ('Courier',18)
+fonte = ('Arial',12)
 notExit = True  # Variável para travar no looping da troca de tema
 while(notExit):
     font = fonte
